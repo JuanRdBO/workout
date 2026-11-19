@@ -605,415 +605,130 @@ a:hover { color: var(--accent); }
   line-height: 1.35;
 }
 
+
+.line { margin: 0 0 10px; color: var(--muted); font-size: .95rem; }
+.line strong { color: var(--text); font-weight: 650; }
+.plan {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 14px;
+}
+.plan th, .plan td {
+  vertical-align: top;
+  text-align: left;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: .92rem;
+}
+.plan th {
+  width: 3.4rem;
+  color: var(--accent-2);
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  font-size: .72rem;
+  padding-top: 12px;
+}
+.plan td { color: var(--muted); }
+.plan a { font-weight: 650; }
+.plan .more { display: block; margin-top: 2px; }
+.picks { margin: 0; padding: 0; list-style: none; }
+.picks li { margin: 0; border-bottom: 1px solid var(--line); }
+.picks a {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  padding: 10px 0;
+  font-size: .92rem;
+}
+.picks a:hover { color: inherit; }
+.picks .n { color: var(--text); font-weight: 650; }
+.picks .m { color: var(--muted); white-space: nowrap; }
+
   </style>
 </head>
 <body>
-<input class="dayrad" type="radio" name="day" id="d-mon" value="mon">
-<input class="dayrad" type="radio" name="day" id="d-tue" value="tue">
-<input class="dayrad" type="radio" name="day" id="d-wed" value="wed">
-<input class="dayrad" type="radio" name="day" id="d-thu" value="thu">
-<input class="dayrad" type="radio" name="day" id="d-fri" value="fri">
-<input class="dayrad" type="radio" name="day" id="d-sat" value="sat">
-<input class="dayrad" type="radio" name="day" id="d-sun" value="sun">
 <div class="app">
   <header class="top">
     <div class="brand">
       <h1>Food</h1>
-      <p>Joan · eat to add muscle</p>
-      <p id="today-date" style="margin-top:2px;color:var(--faint);font-size:.8rem"></p>
+      <p id="today-date"></p>
     </div>
     <div class="tools">
       <a class="icon-btn" href="./">Workout</a>
     </div>
   </header>
 
-  <div class="stat-row">
-    <div class="stat">
-      <p class="k">Daily energy</p>
-      <p class="v">2,800–3,000 kcal</p>
-      <p class="s">Estimate, for muscle gain at ~72 kg</p>
-    </div>
-    <div class="stat">
-      <p class="k">Daily protein</p>
-      <p class="v">130–150 g</p>
-      <p class="s">Estimate, about 1.8–2.1 g/kg</p>
-    </div>
+  <p class="line"><strong>2,800–3,000 kcal</strong> · <strong>130–150 g protein</strong> a day.</p>
+  <p class="line"><strong>Breakfast:</strong> 2 eggs, 2 sourdough, chocolate olive oil, coffee. Always PB, plus a 3rd egg or Greek yoghurt. ~650–750 kcal, ~30–40 g.</p>
+  <p class="line"><strong>Lunch Mon–Fri:</strong> office Athletes Nutrition via Jules, ~520 kcal, 49 g. <strong>Sat–Sun:</strong> leftover AN.</p>
+  <p class="line"><strong>Shake:</strong> 1 scoop whey, 400 ml full-cream milk, 1 banana, 50 g oats, 1 tbsp peanut butter. ~770 kcal, ~50 g. On GYG or Nando’s nights, whey and milk only (~380 kcal, ~37 g).</p>
+  <p class="line"><strong>Supplements:</strong> creatine 5 g daily; vitamin C 1 g after breakfast; omega 3, 2 caps before bed; 3 L water.</p>
+  <p class="line"><strong>Order AN:</strong> Sunday midnight cutoff · deliver to 77 Pacific Highway, North Sydney 2060, Tue or Wed · Subscribe &amp; Save 5%. <a href="https://athletesnutrition.com.au/pages/delivery">Delivery</a> · <a href="https://athletesnutrition.com.au/pages/specials-deals">Specials</a></p>
+
+  <div class="card" style="margin: 14px 0">
+    <div class="group-tag">AN dinners</div>
+    <ul class="picks">
+      <li><a href="https://athletesnutrition.com.au/products/creamy-chilli-protein-pasta-with-chicken-breast"><span class="n">Creamy Chilli Pasta with Chicken Breast</span><span class="m">680 kcal · 64 g</span></a></li>
+      <li><a href="https://athletesnutrition.com.au/products/chicken-pesto-pasta"><span class="n">Chicken Pesto Pasta</span><span class="m">582 kcal · 59 g</span></a></li>
+      <li><a href="https://athletesnutrition.com.au/products/creamy-roma-chicken-pasta"><span class="n">Creamy Roma Chicken Fettuccine</span><span class="m">590 kcal · 57 g</span></a></li>
+      <li><a href="https://athletesnutrition.com.au/products/butter-chicken-basmati-rice"><span class="n">Butter Chicken with Basmati Rice</span><span class="m">605 kcal · 51 g</span></a></li>
+      <li><a href="https://athletesnutrition.com.au/products/smokey-bbq-pulled-beef-with-high-protein-cheesy-mac"><span class="n">Smokey BBQ Pulled Beef with Cheesy Mac</span><span class="m">632 kcal · 56 g</span></a></li>
+      <li><a href="https://athletesnutrition.com.au/products/sweet-sour-korean-chicken-noodles"><span class="n">Sweet &amp; Sour Korean Chicken Noodles</span><span class="m">623 kcal · 45 g</span></a></li>
+      <li><a href="https://athletesnutrition.com.au/products/teriyaki-salmon-with-mi-goreng-noodles"><span class="n">MUSCLE MEAL · Teriyaki Salmon with Mi Goreng</span><span class="m">670 kcal · 47 g</span></a></li>
+      <li><a href="https://athletesnutrition.com.au/products/copy-of-chicken-breast-with-brown-rice"><span class="n">MUSCLE MEAL · Chicken Breast with Brown Rice</span><span class="m">554 kcal · 67 g</span></a></li>
+    </ul>
   </div>
 
-  <nav class="week" aria-label="Dinner week">
-    <label class="wd" for="d-mon">Mon<span class="dn">AN</span></label>
-    <label class="wd" for="d-tue">Tue<span class="dn">AN</span></label>
-    <label class="wd" for="d-wed">Wed<span class="dn">AN</span></label>
-    <label class="wd" for="d-thu">Thu<span class="dn">Out</span></label>
-    <label class="wd" for="d-fri">Fri<span class="dn">AN</span></label>
-    <label class="wd" for="d-sat">Sat<span class="dn">Out</span></label>
-    <label class="wd off" for="d-sun">Sun<span class="dn">Leftover</span></label>
-  </nav>
-
-  <div class="stack" style="margin-bottom:16px">
-    <div class="card meal">
-      <div class="group-tag">Every morning</div>
-      <h3>Breakfast</h3>
-      <p>What you already do: two eggs, two sourdough slices, a small piece of chocolate olive oil, and coffee. Sometimes peanut butter on one slice.</p>
-      <p><strong>Upgrade:</strong> peanut butter on toast every day, plus a third egg or a serve of Greek yoghurt.</p>
-      <p>As it stands, about <strong>550–600 kcal</strong> and <strong>~25 g protein</strong>. The upgrade adds roughly 90–160 kcal and 6–15 g protein, depending on whether you add the egg or the yoghurt. <span class="chip warn">Estimate</span></p>
-    </div>
-
-    <div class="card meal">
-      <div class="group-tag">Weekdays</div>
-      <h3>Lunch</h3>
-      <p>The office <a href="https://athletesnutrition.com.au/collections/meals">Athletes Nutrition</a> meal Jules orders. Recent orders average about <strong>520 kcal</strong> and <strong>49 g protein</strong>. <span class="chip warn">Estimate</span></p>
-      <p>Saturday and Sunday are not covered by that lunch — use a leftover AN meal, or a simple plate of eggs and toast, plus the shake.</p>
-    </div>
-
-    <div class="card meal">
-      <div class="group-tag">Every evening</div>
-      <h3>Shake — don’t skip this</h3>
-      <p>One Athletes Nutrition tray is not a full dinner. This shake is how you close most of the calorie and protein gap. Mix:</p>
-      <ul>
-        <li>1 scoop whey (~120 kcal, ~24–25 g protein)</li>
-        <li>400 ml full-cream milk (~260 kcal, ~13 g protein)</li>
-        <li>1 banana (~105 kcal)</li>
-        <li>50 g rolled oats (~190 kcal, ~7 g protein)</li>
-        <li>1 tablespoon peanut butter (~95 kcal, ~4 g protein)</li>
-      </ul>
-      <p>About <strong>770 kcal</strong> and <strong>~50 g protein</strong>, around $3 once you have a tub of whey. <span class="chip warn">Estimate — check the tub and milk label</span></p>
-      <p>On a bigger dinner night (Nando’s or a GYG enchilada), a smaller shake of just whey and milk is enough, about 380 kcal and 37 g protein. <span class="chip warn">Estimate</span></p>
-    </div>
-
-    <div class="card meal">
-      <div class="group-tag">From your trainer</div>
-      <h3>Supplements and water</h3>
-      <ul>
-        <li><strong>Creatine 5 g</strong> every day, including rest days.</li>
-        <li><strong>Vitamin C 1 g</strong> after breakfast.</li>
-        <li><strong>Omega 3, 2 caps</strong> before bed.</li>
-        <li><strong>3 L of water</strong> across the day.</li>
-      </ul>
-    </div>
-
-    <div class="card meal">
-      <div class="group-tag">Athletes Nutrition</div>
-      <h3>How to order dinners</h3>
-      <p>Cutoff is <strong>Sunday midnight</strong>. Delivery to <strong>77 Pacific Highway, North Sydney 2060</strong> is Tuesday 12:15–22:00 or Wednesday 07:00–18:30. Meals keep 7–10 days in the fridge (minimum 5 days guaranteed) and can be frozen. <a href="https://athletesnutrition.com.au/pages/delivery">Delivery</a> · <a href="https://athletesnutrition.com.au/pages/faqs">FAQs</a></p>
-      <p>No published minimum order. Delivery fee is shown at checkout. NSW orders over $200 get discounted delivery. Subscribe &amp; Save is <strong>5%</strong> (weekly or fortnightly; skip or cancel any time). First-order code <strong>ATHL20</strong> is $20 off if you have not already used it. <a href="https://athletesnutrition.com.au/pages/specials-deals">Specials</a></p>
-      <p>If Jules already sends the office lunch box to that address, add 5–7 of the dinners below to the same order. Otherwise place your own weekly order to the same address.</p>
-    </div>
-
-    <div class="card meal">
-      <div class="group-tag">This week’s AN dinners</div>
-      <h3>High-calorie picks</h3>
-      <p>Skip the lighter office lunches (like barramundi at 319 kcal) for dinner. These are the best calorie-and-protein trays:</p>
-      <a class="pick" href="https://athletesnutrition.com.au/products/creamy-chilli-protein-pasta-with-chicken-breast">
-        <span class="pn">Creamy Chilli Pasta with Chicken Breast</span>
-        <span class="pm">680 kcal · 64 g protein · $13.50 — best everyday dinner</span>
-      </a>
-      <a class="pick" href="https://athletesnutrition.com.au/products/chicken-pesto-pasta">
-        <span class="pn">Chicken Pesto Pasta</span>
-        <span class="pm">582 kcal · 59 g protein · $11.95 — best price</span>
-      </a>
-      <a class="pick" href="https://athletesnutrition.com.au/products/creamy-roma-chicken-pasta">
-        <span class="pn">Creamy Roma Chicken Fettuccine</span>
-        <span class="pm">590 kcal · 57 g protein · $12.95</span>
-      </a>
-      <a class="pick" href="https://athletesnutrition.com.au/products/butter-chicken-basmati-rice">
-        <span class="pn">Butter Chicken with Basmati Rice</span>
-        <span class="pm">605 kcal · 51 g protein · $12.95</span>
-      </a>
-      <a class="pick" href="https://athletesnutrition.com.au/products/smokey-bbq-pulled-beef-with-high-protein-cheesy-mac">
-        <span class="pn">Smokey BBQ Pulled Beef with Cheesy Mac</span>
-        <span class="pm">632 kcal · 56 g protein · $15.50</span>
-      </a>
-      <a class="pick" href="https://athletesnutrition.com.au/products/sweet-sour-korean-chicken-noodles">
-        <span class="pn">Sweet &amp; Sour Korean Chicken Noodles</span>
-        <span class="pm">623 kcal · 45 g protein · $13.25</span>
-      </a>
-      <a class="pick" href="https://athletesnutrition.com.au/products/teriyaki-salmon-with-mi-goreng-noodles">
-        <span class="pn">MUSCLE MEAL · Teriyaki Salmon with Mi Goreng</span>
-        <span class="pm">670 kcal · 47 g protein · $16.95 — high calorie, less protein</span>
-      </a>
-      <a class="pick" href="https://athletesnutrition.com.au/products/copy-of-chicken-breast-with-brown-rice">
-        <span class="pn">MUSCLE MEAL · Chicken Breast with Brown Rice</span>
-        <span class="pm">554 kcal · 67 g protein · $13.95 — 200 g chicken, highest protein, a bit light on calories</span>
-      </a>
-    </div>
+  <div class="card">
+    <div class="group-tag">Week</div>
+    <table class="plan">
+      <tr>
+        <th>Mon</th>
+        <td><a href="https://athletesnutrition.com.au/products/creamy-chilli-protein-pasta-with-chicken-breast">Creamy Chilli Pasta</a> · 680 kcal, 64 g<span class="more">+ large shake</span></td>
+      </tr>
+      <tr>
+        <th>Tue</th>
+        <td><a href="https://athletesnutrition.com.au/products/butter-chicken-basmati-rice">Butter Chicken</a> · 605 kcal, 51 g or <a href="https://athletesnutrition.com.au/products/chicken-pesto-pasta">Pesto Pasta</a> · 582 kcal, 59 g<span class="more">+ large shake</span></td>
+      </tr>
+      <tr>
+        <th>Wed</th>
+        <td><a href="https://athletesnutrition.com.au/products/smokey-bbq-pulled-beef-with-high-protein-cheesy-mac">BBQ Pulled Beef</a> · 632 kcal, 56 g or <a href="https://athletesnutrition.com.au/products/creamy-roma-chicken-pasta">Roma Fettuccine</a> · 590 kcal, 57 g<span class="more">+ large shake</span></td>
+      </tr>
+      <tr>
+        <th>Thu</th>
+        <td><a href="https://www.guzmanygomez.com.au/wp-content/uploads/2026/11/261029_NUTRITION_ALLERGEN_GUIDE_420X297MM.pdf">GYG Enchilada, Mild Grilled Chicken</a> · 1,150 kcal, 59.2 g or <a href="https://www.guzmanygomez.com.au/wp-content/uploads/2026/11/261029_NUTRITION_ALLERGEN_GUIDE_420X297MM.pdf">Nachos, Mild Grilled Chicken</a> · 1,110 kcal, 52.3 g. GYG Northpoint, 100 Miller St, closed Sat–Sun. Or <a href="https://www.nandos.com.au/menu-item/half-chicken">Nando’s Half Chicken</a> · 715 kcal, 108 g + <a href="https://www.nandos.com.au/menu-item/peri-peri-chips">Large Chips</a> · 533 kcal, 8.9 g (1,248 kcal, 116.9 g). Then small shake.</td>
+      </tr>
+      <tr>
+        <th>Fri</th>
+        <td><a href="https://athletesnutrition.com.au/products/sweet-sour-korean-chicken-noodles">Korean Chicken Noodles</a> · 623 kcal, 45 g or <a href="https://athletesnutrition.com.au/products/chicken-pesto-pasta">Pesto Pasta</a> · 582 kcal, 59 g<span class="more">+ large shake</span></td>
+      </tr>
+      <tr>
+        <th>Sat</th>
+        <td><a href="https://www.nandos.com.au/menu-item/half-chicken">Nando’s Half Chicken</a> + <a href="https://www.nandos.com.au/menu-item/peri-peri-chips">Large Chips</a> · 1,248 kcal, 116.9 g, or two AN trays. GYG closed. Then small shake if needed.</td>
+      </tr>
+      <tr>
+        <th>Sun</th>
+        <td>Leftover AN · one high-cal tray, or two if no other lunch<span class="more">+ large shake · order next week by midnight</span></td>
+      </tr>
+    </table>
   </div>
 
-  <section class="day" id="p-mon">
-    <header class="day-head">
-      <h2>Monday dinner</h2>
-      <p>Legs day — Athletes Nutrition tray plus the large shake</p>
-    </header>
-    <div class="stack">
-      <div class="card meal">
-        <div class="group-tag">Dinner</div>
-        <h3>Creamy Chilli Pasta with Chicken Breast</h3>
-        <p>680 kcal · 64 g protein · $13.50. Best everyday tray.</p>
-        <a class="pick" href="https://athletesnutrition.com.au/products/creamy-chilli-protein-pasta-with-chicken-breast">
-          <span class="pn">Open this meal</span>
-          <span class="pm">athletesnutrition.com.au</span>
-        </a>
-        <p style="margin-top:10px">Then the large evening shake (~770 kcal, ~50 g protein).</p>
-      </div>
-      <div class="card meal">
-        <div class="group-tag">Estimated daily total</div>
-        <div class="totals">
-          <div><span>Breakfast (with upgrade)</span><span>~650–750 kcal · ~30–40 g</span></div>
-          <div><span>Lunch (office AN)</span><span>~520 kcal · ~49 g</span></div>
-          <div><span>Dinner (chilli pasta)</span><span>680 kcal · 64 g</span></div>
-          <div><span>Large shake</span><span>~770 kcal · ~50 g</span></div>
-          <div class="sum"><span>Total</span><span>~2,620–2,720 kcal · ~190 g</span></div>
-        </div>
-        <p class="note-est">Protein is already over the target. Calories may still sit 100–380 short of 2,800–3,000 — a bit more oats or milk in the shake, or peanut butter on breakfast, closes it. Figures other than the labelled AN tray are estimates.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="day" id="p-tue">
-    <header class="day-head">
-      <h2>Tuesday dinner</h2>
-      <p>Yoga or pilates — Athletes Nutrition tray plus the large shake</p>
-    </header>
-    <div class="stack">
-      <div class="card meal">
-        <div class="group-tag">Dinner</div>
-        <h3>Butter Chicken or Chicken Pesto Pasta</h3>
-        <p>Butter chicken is 605 kcal, 51 g protein, $12.95. Pesto pasta is 582 kcal, 59 g protein, $11.95.</p>
-        <a class="pick" href="https://athletesnutrition.com.au/products/butter-chicken-basmati-rice">
-          <span class="pn">Butter Chicken with Basmati Rice</span>
-          <span class="pm">605 kcal · 51 g protein · $12.95</span>
-        </a>
-        <a class="pick" href="https://athletesnutrition.com.au/products/chicken-pesto-pasta">
-          <span class="pn">Chicken Pesto Pasta</span>
-          <span class="pm">582 kcal · 59 g protein · $11.95</span>
-        </a>
-        <p style="margin-top:10px">Then the large evening shake. Still eat for a surplus even though you are not lifting.</p>
-      </div>
-      <div class="card meal">
-        <div class="group-tag">Estimated daily total</div>
-        <div class="totals">
-          <div><span>Breakfast (with upgrade)</span><span>~650–750 kcal · ~30–40 g</span></div>
-          <div><span>Lunch (office AN)</span><span>~520 kcal · ~49 g</span></div>
-          <div><span>Dinner (pesto or butter chicken)</span><span>~580–605 kcal · ~51–59 g</span></div>
-          <div><span>Large shake</span><span>~770 kcal · ~50 g</span></div>
-          <div class="sum"><span>Total</span><span>~2,520–2,645 kcal · ~180–200 g</span></div>
-        </div>
-        <p class="note-est">A little short on calories — keep peanut butter on breakfast and don’t water down the shake. Estimates except the labelled AN trays.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="day" id="p-wed">
-    <header class="day-head">
-      <h2>Wednesday dinner</h2>
-      <p>Chest day — Athletes Nutrition tray plus the large shake</p>
-    </header>
-    <div class="stack">
-      <div class="card meal">
-        <div class="group-tag">Dinner</div>
-        <h3>BBQ Pulled Beef or Roma Fettuccine</h3>
-        <a class="pick" href="https://athletesnutrition.com.au/products/smokey-bbq-pulled-beef-with-high-protein-cheesy-mac">
-          <span class="pn">Smokey BBQ Pulled Beef with Cheesy Mac</span>
-          <span class="pm">632 kcal · 56 g protein · $15.50</span>
-        </a>
-        <a class="pick" href="https://athletesnutrition.com.au/products/creamy-roma-chicken-pasta">
-          <span class="pn">Creamy Roma Chicken Fettuccine</span>
-          <span class="pm">590 kcal · 57 g protein · $12.95</span>
-        </a>
-        <p style="margin-top:10px">Then the large evening shake.</p>
-      </div>
-      <div class="card meal">
-        <div class="group-tag">Estimated daily total</div>
-        <div class="totals">
-          <div><span>Breakfast (with upgrade)</span><span>~650–750 kcal · ~30–40 g</span></div>
-          <div><span>Lunch (office AN)</span><span>~520 kcal · ~49 g</span></div>
-          <div><span>Dinner (beef or roma)</span><span>~590–632 kcal · ~56–57 g</span></div>
-          <div><span>Large shake</span><span>~770 kcal · ~50 g</span></div>
-          <div class="sum"><span>Total</span><span>~2,530–2,670 kcal · ~185–195 g</span></div>
-        </div>
-        <p class="note-est">Same pattern as Monday: protein is fine, calories may still need the full shake. Estimates except the labelled AN trays.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="day" id="p-thu">
-    <header class="day-head">
-      <h2>Thursday dinner</h2>
-      <p>Arms day — eat out near the office, then a smaller shake</p>
-    </header>
-    <div class="stack">
-      <div class="card meal">
-        <div class="group-tag">Dinner · walk or Uber</div>
-        <h3>GYG or Nando’s</h3>
-        <p><a href="https://northpointsydney.com.au/directory/eat-street/guzman-y-gomez/">Guzman y Gomez</a> at Northpoint, 100 Miller Street, is a short walk. Open Monday–Friday, until 8:00pm (8:30pm Thursday and Friday). Closed Saturday and Sunday. Official nutrition current at 29 Oct 2026; prices are “from” prices on the national menu and may vary.</p>
-        <a class="pick" href="https://www.guzmanygomez.com.au/wp-content/uploads/2026/11/261029_NUTRITION_ALLERGEN_GUIDE_420X297MM.pdf">
-          <span class="pn">Enchilada with Cheese &amp; Queso, Mild Grilled Chicken</span>
-          <span class="pm">1150 kcal · 59.2 g protein · from $17.40 — best GYG pick</span>
-        </a>
-        <a class="pick" href="https://www.guzmanygomez.com.au/wp-content/uploads/2026/11/261029_NUTRITION_ALLERGEN_GUIDE_420X297MM.pdf">
-          <span class="pn">Nachos, Mild Grilled Chicken</span>
-          <span class="pm">1110 kcal · 52.3 g protein · from $16.60</span>
-        </a>
-        <p style="margin-top:10px">Or <a href="https://www.nandos.com.au/menu-item/half-chicken">Nando’s Half PERi-PERi Chicken</a> (715 kcal, 108 g protein) plus <a href="https://www.nandos.com.au/menu-item/peri-peri-chips">Large PERi-PERi Chips</a> (533 kcal, 8.9 g protein on the detailed table; the same page’s intro line lists 565 kcal). Combined: <strong>1,248 kcal</strong> and <strong>116.9 g protein</strong>. Confirm the closest store and price in the Nando’s or Uber Eats app — delivery apps often list the half chicken around $19.95, plus chips and fees.</p>
-        <p>Then a smaller shake (whey and milk only), about 380 kcal and 37 g protein. <span class="chip warn">Estimate</span></p>
-      </div>
-      <div class="card meal">
-        <div class="group-tag">Estimated daily total</div>
-        <div class="totals">
-          <div><span>Breakfast (with upgrade)</span><span>~650–750 kcal · ~30–40 g</span></div>
-          <div><span>Lunch (office AN)</span><span>~520 kcal · ~49 g</span></div>
-          <div><span>GYG enchilada, or Nando’s + chips</span><span>1,150–1,248 kcal · 59–117 g</span></div>
-          <div><span>Smaller shake</span><span>~380 kcal · ~37 g</span></div>
-          <div class="sum"><span>Total</span><span>~2,700–2,900 kcal · ~175–240 g</span></div>
-        </div>
-        <p class="note-est">This is the easiest day to land in the 2,800–3,000 kcal range. GYG and Nando’s figures are official; breakfast, lunch and the shake are estimates.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="day" id="p-fri">
-    <header class="day-head">
-      <h2>Friday dinner</h2>
-      <p>Back day — Athletes Nutrition tray plus the large shake</p>
-    </header>
-    <div class="stack">
-      <div class="card meal">
-        <div class="group-tag">Dinner</div>
-        <h3>Korean Chicken Noodles or Pesto Pasta</h3>
-        <a class="pick" href="https://athletesnutrition.com.au/products/sweet-sour-korean-chicken-noodles">
-          <span class="pn">Sweet &amp; Sour Korean Chicken Noodles</span>
-          <span class="pm">623 kcal · 45 g protein · $13.25</span>
-        </a>
-        <a class="pick" href="https://athletesnutrition.com.au/products/chicken-pesto-pasta">
-          <span class="pn">Chicken Pesto Pasta</span>
-          <span class="pm">582 kcal · 59 g protein · $11.95</span>
-        </a>
-        <p style="margin-top:10px">Then the large evening shake. If you finish training late, GYG Northpoint is open until 8:30pm on Friday as a backup (enchilada or nachos with grilled chicken).</p>
-      </div>
-      <div class="card meal">
-        <div class="group-tag">Estimated daily total</div>
-        <div class="totals">
-          <div><span>Breakfast (with upgrade)</span><span>~650–750 kcal · ~30–40 g</span></div>
-          <div><span>Lunch (office AN)</span><span>~520 kcal · ~49 g</span></div>
-          <div><span>Dinner (noodles or pesto)</span><span>~580–623 kcal · ~45–59 g</span></div>
-          <div><span>Large shake</span><span>~770 kcal · ~50 g</span></div>
-          <div class="sum"><span>Total</span><span>~2,520–2,660 kcal · ~175–200 g</span></div>
-        </div>
-        <p class="note-est">Same as the other AN nights: keep the shake big if you want to hit 2,800 kcal. Estimates except the labelled AN trays.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="day" id="p-sat">
-    <header class="day-head">
-      <h2>Saturday dinner</h2>
-      <p>Shoulders, and football if it falls today — this is the high-expenditure day. GYG Northpoint is closed.</p>
-    </header>
-    <div class="stack">
-      <div class="card meal">
-        <div class="group-tag">Dinner</div>
-        <h3>Nando’s, or two AN meals</h3>
-        <p>No office lunch today, so you need more food. Best option: <a href="https://www.nandos.com.au/menu-item/half-chicken">Half PERi-PERi Chicken</a> plus <a href="https://www.nandos.com.au/menu-item/peri-peri-chips">Large PERi-PERi Chips</a> — <strong>1,248 kcal</strong> and <strong>116.9 g protein</strong>. Confirm the store and price in the app.</p>
-        <p>Or two leftover AN trays (for example chilli pasta + pesto, about 1,260 kcal and 123 g protein) plus a smaller shake if you are still hungry.</p>
-        <p>Lunch can be a leftover AN meal or eggs on toast, since the office order does not cover the weekend.</p>
-      </div>
-      <div class="card meal">
-        <div class="group-tag">Estimated daily total</div>
-        <div class="totals">
-          <div><span>Breakfast (with upgrade)</span><span>~650–750 kcal · ~30–40 g</span></div>
-          <div><span>Weekend lunch (leftover AN)</span><span>~580–680 kcal · ~50–64 g</span></div>
-          <div><span>Nando’s half chicken + large chips</span><span>1,248 kcal · 117 g</span></div>
-          <div><span>Smaller shake, if needed</span><span>~380 kcal · ~37 g</span></div>
-          <div class="sum"><span>Total</span><span>~2,480–3,060 kcal · ~200–260 g</span></div>
-        </div>
-        <p class="note-est">Use the smaller shake if lunch was already a full AN tray and you had the Nando’s meal. High-expenditure day — don’t cut this short. Mix of official and estimated figures.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="day" id="p-sun">
-    <header class="day-head">
-      <h2>Sunday</h2>
-      <p>Rest day — leftovers, plus the shake. Order tonight by midnight if you need next week’s AN box.</p>
-    </header>
-    <div class="stack">
-      <div class="card meal">
-        <div class="group-tag">Dinner</div>
-        <h3>Leftover Athletes Nutrition</h3>
-        <p>One high-calorie leftover tray, or two if you had no other lunch. Then the large shake. Sunday midnight is the cutoff for a Tuesday or Wednesday delivery to 77 Pacific Highway, North Sydney.</p>
-      </div>
-      <div class="card meal">
-        <div class="group-tag">Estimated daily total</div>
-        <div class="totals">
-          <div><span>Breakfast (with upgrade)</span><span>~650–750 kcal · ~30–40 g</span></div>
-          <div><span>Weekend lunch (leftover AN)</span><span>~580–680 kcal · ~50–64 g</span></div>
-          <div><span>Dinner (another leftover tray)</span><span>~580–680 kcal · ~50–64 g</span></div>
-          <div><span>Large shake</span><span>~770 kcal · ~50 g</span></div>
-          <div class="sum"><span>Total</span><span>~2,580–2,880 kcal · ~180–220 g</span></div>
-        </div>
-        <p class="note-est">If you only have one leftover tray, make the shake the large one and add extra oats or toast. Most figures are estimates.</p>
-      </div>
-    </div>
-  </section>
-
-  <p class="foot">Athletes Nutrition macros and prices are from the official product pages. GYG figures are from the official nutrition guide current at 29 Oct 2026 and the national menu dated 2 Sep 2026. Nando’s figures are from the official item pages; the chips page also shows a slightly higher intro calorie line than its detailed table — the table is what is used here. Breakfast, office-lunch averages, the shake, and daily totals are estimates. Nothing on this page is an order; it is a plan.</p>
+  <p class="foot">Breakfast, lunch averages, the shake and daily totals are estimates. AN, GYG (guide current 29 Oct 2026) and Nando’s numbers are from their official pages. Nando’s chips intro line lists 565 kcal; the 533 kcal figure is from the detailed table.</p>
 </div>
-
 <script>
 (function () {
-  const TZ = "Australia/Sydney";
-  const DAYS = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
-
-  function sydneyParts(d) {
-    const parts = new Intl.DateTimeFormat("en-US", {
-      timeZone: TZ,
-      weekday: "short",
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
-    }).formatToParts(d);
-    const get = (t) => parts.find((p) => p.type === t).value;
-    const map = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
-    return { dow: map[get("weekday")], label: get("weekday") };
-  }
-
-  const today = sydneyParts(new Date());
-  const todayId = DAYS[today.dow];
-
-  document.querySelectorAll(".wd").forEach((lab) => {
-    if (lab.htmlFor === "d-" + todayId) lab.classList.add("today");
-  });
-
-  const qDay = new URLSearchParams(location.search).get("day");
-  const pickId = (qDay && DAYS.includes(qDay)) ? qDay : todayId;
-  const todayRadio = document.getElementById("d-" + pickId);
-  if (todayRadio) todayRadio.checked = true;
-
-  function syncDay() {
-    const checked = document.querySelector('input[name="day"]:checked');
-    const id = checked ? checked.value : todayId;
-    document.querySelectorAll(".day").forEach((el) => {
-      el.classList.toggle("show", el.id === "p-" + id);
-    });
-    document.querySelectorAll(".wd").forEach((lab) => {
-      lab.classList.toggle("picked", lab.htmlFor === "d-" + id);
-    });
-  }
-  document.querySelectorAll('input[name="day"]').forEach((r) => {
-    r.addEventListener("change", syncDay);
-  });
-  syncDay();
-
-  const dateEl = document.getElementById("today-date");
-  if (dateEl) {
-    const pretty = new Intl.DateTimeFormat("en-AU", {
-      timeZone: TZ,
-      weekday: "short",
-      day: "numeric",
-      month: "short",
-    }).format(new Date());
-    dateEl.textContent = pretty + " · Sydney";
-  }
+  const el = document.getElementById("today-date");
+  if (!el) return;
+  const pretty = new Intl.DateTimeFormat("en-AU", {
+    timeZone: "Australia/Sydney",
+    weekday: "short",
+    day: "numeric",
+    month: "short",
+  }).format(new Date());
+  el.textContent = pretty + " · Sydney";
 })();
 </script>
 </body>
