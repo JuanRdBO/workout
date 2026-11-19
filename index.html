@@ -502,6 +502,109 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
 }
 
+/* Text links and header nav */
+a.icon-btn {
+  text-decoration: none;
+  color: inherit;
+}
+a { color: var(--accent-2); }
+a:hover { color: var(--accent); }
+
+/* Food page */
+.stat-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 0 0 14px;
+}
+.stat {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 14px 12px;
+}
+.stat .k {
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+.stat .v {
+  font-size: 1.15rem;
+  font-weight: 750;
+  letter-spacing: -.03em;
+  margin: 0;
+  line-height: 1.2;
+}
+.stat .s { margin: 4px 0 0; color: var(--faint); font-size: .75rem; }
+
+.meal h3 { margin: 0 0 6px; font-size: 1.05rem; letter-spacing: -.02em; line-height: 1.25; }
+.meal p { margin: 0 0 8px; color: var(--muted); font-size: .92rem; }
+.meal p:last-child { margin-bottom: 0; }
+.meal ul, .meal ol { margin: 0; padding: 0 0 0 1.15rem; color: var(--muted); font-size: .92rem; }
+.meal li { margin: 0 0 6px; }
+.meal li:last-child { margin-bottom: 0; }
+.meal strong { color: var(--text); font-weight: 650; }
+
+.pick {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: var(--card-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-top: 8px;
+}
+.pick:hover { border-color: var(--accent); color: inherit; }
+.pick .pn { font-weight: 700; color: var(--text); display: block; }
+.pick .pm { color: var(--muted); font-size: .82rem; margin-top: 2px; display: block; }
+
+.totals {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+.totals div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: .92rem;
+  color: var(--muted);
+}
+.totals span:last-child { color: var(--text); font-weight: 650; text-align: right; }
+.totals .sum {
+  border-top: 1px dashed var(--line);
+  padding-top: 8px;
+  margin-top: 4px;
+  color: var(--text);
+  font-weight: 700;
+}
+.totals .sum span { color: var(--accent-2); }
+
+.note-est {
+  margin: 8px 0 0;
+  color: var(--faint);
+  font-size: .78rem;
+}
+
+.day-head .dur {
+  margin: 6px 0 0;
+  color: var(--accent-2);
+  font-size: .9rem;
+  font-weight: 650;
+}
+.week-total {
+  margin: -4px 0 14px;
+  text-align: center;
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.35;
+}
+
   </style>
 </head>
 <body>
@@ -520,6 +623,7 @@ img { max-width: 100%; display: block; }
       <p id="today-date" style="margin-top:2px;color:var(--faint);font-size:.8rem"></p>
     </div>
     <div class="tools">
+      <a class="icon-btn" href="food.html">Food</a>
       <button type="button" class="icon-btn" id="wake-btn" title="Keep the screen on">Keep<br>awake</button>
     </div>
   </header>
@@ -533,6 +637,8 @@ img { max-width: 100%; display: block; }
 <label class="wd" for="d-sat">Sat<span class="dn">Delts</span></label>
 <label class="wd off" for="d-sun">Sun<span class="dn">Rest</span></label>
   </nav>
+
+  <p class="week-total">About 6 h 5 min of lifting this week, plus a 45–60 min yoga or pilates class on Tuesday.</p>
 
   
 <details class="tips">
@@ -557,6 +663,7 @@ img { max-width: 100%; display: block; }
     <header class="day-head">
       <h2>Legs</h2>
       <p>Trainer Day 3 · Quad-focused  ·  hamstrings and calves added</p>
+      <p class="dur">About 80 min</p>
     </header>
     <div class="stack"><div class="stack"><div class="card"><article class="ex">
         <div class="ex-top">
@@ -684,6 +791,7 @@ img { max-width: 100%; display: block; }
     <header class="day-head">
       <h2>Yoga or pilates</h2>
       <p>No lifting today. Yoga or pilates for mobility and core, then recover so the muscle can grow.</p>
+      <p class="dur">Yoga or pilates class, about 45–60 min</p>
     </header>
     
   <div class="rest-card">
@@ -695,6 +803,7 @@ img { max-width: 100%; display: block; }
     <header class="day-head">
       <h2>Chest + abs</h2>
       <p>Trainer Day 1 · Full chest + abs</p>
+      <p class="dur">About 70 min</p>
     </header>
     <div class="stack"><div class="stack"><div class="card"><article class="ex">
         <div class="ex-top">
@@ -860,6 +969,7 @@ img { max-width: 100%; display: block; }
     <header class="day-head">
       <h2>Arms + upper</h2>
       <p>Trainer Day 5 · Arms  ·  your ‘random stuff’ day, plus a second chest and back hit</p>
+      <p class="dur">About 90 min</p>
     </header>
     <div class="stack"><div class="sec">Chest + back · second hit</div><div class="stack"><div class="card"><article class="ex">
         <div class="ex-top">
@@ -1051,6 +1161,7 @@ img { max-width: 100%; display: block; }
     <header class="day-head">
       <h2>Back</h2>
       <p>Trainer Day 2 · Back width and thickness</p>
+      <p class="dur">About 60 min</p>
     </header>
     <div class="stack"><div class="stack"><div class="card"><article class="ex">
         <div class="ex-top">
@@ -1148,6 +1259,7 @@ img { max-width: 100%; display: block; }
     <header class="day-head">
       <h2>Shoulders + traps + abs</h2>
       <p>Trainer Day 4 · Shoulders and traps  ·  abs added</p>
+      <p class="dur">About 65 min</p>
     </header>
     <div class="stack"><div class="stack"><div class="card"><article class="ex">
         <div class="ex-top">
@@ -1294,6 +1406,7 @@ img { max-width: 100%; display: block; }
     <header class="day-head">
       <h2>Rest day</h2>
       <p>No lifting today. Recover so the muscle can actually grow.</p>
+      
     </header>
     
   <div class="rest-card">
